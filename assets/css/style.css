@@ -50,19 +50,44 @@ table {
 /* END RESET */
 
 /*keyframes start*/
-/*@keyframes title {
-	0% {color: #28FF13;}
-	100% {color: blue}
+@keyframes title {
+	0% {color:purple;}
+	100% {color: #28FF13;}
 }
 
 @keyframes begin {
-	0% {color: purple;}
-	100% {color: #28FF13;}
+	0% {color: #28FF13;}
+	100% {color: blue}
 }
 
 @keyframes loseGame {
  	0% {color: red;}
  	100% {color: #28FF13;}
+
+}
+
+@keyframes titleBounce {
+  from {
+    margin-top: 100px;
+    width: 100%; 
+  }
+
+  to {
+    margin-top: 0%;
+    width: 100%;
+  }
+}
+
+/*@keyframes slideIn {
+  from {
+    margin-top: 100px;
+    width: 100%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }*/
 /*keyframes end*/
 
@@ -92,8 +117,12 @@ h1 {
 	text-align: center;
 }
 
+#playing {
+    animation-name:;
+}
+
 #begin {
-    padding-bottom: 200px;
+    padding-bottom: 100px;
 }
 
 #flavortext {
@@ -106,6 +135,7 @@ h1 {
 }
 
 #gameWonScreen {
+    animation-name: title;
     text-align: center;
 }
 
@@ -122,14 +152,14 @@ h1 {
 /*animations linked to keyframes start*/
 .topTextAnim1 {
     animation-name: title;
-	animation-duration: 4s;
+	animation-duration: 2s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 }
 
 .topTextAnim2 {
-	animation-name: begin;
-	animation-duration: 2s;
+	animation-name: begin, slideIn;
+	animation-duration: 1s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 }

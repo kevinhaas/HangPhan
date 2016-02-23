@@ -27,7 +27,7 @@ var gameOver = false;
 
 // renders blank spaces on the game board equal to the length of the selected word
 	function renderBlanks() {
-        blankSpace = []
+        blankSpace = [];
         song = songs[Math.floor(Math.random() * songs.length)];
         hiddenLetter = song.split("");
         letterCount = song.length;
@@ -43,12 +43,12 @@ var gameOver = false;
         
 // checks to see if a keypress is already a current incorrect guess           
         if (playerInput != incorrectLetter[0] && playerInput != incorrectLetter[1] && playerInput != incorrectLetter[2] && playerInput != incorrectLetter[3] && playerInput != incorrectLetter[4] && playerInput != incorrectLetter[5] && playerInput != incorrectLetter[6] && playerInput != incorrectLetter[7] && playerInput != incorrectLetter[8] && playerInput != incorrectLetter[9] && playerInput != incorrectLetter[10]) {
-        guessesRemain--
+        guessesRemain--;
         }
      
 // checks to see if a keypress is already a current correct guess   
         if (playerInput == correctLetter[0] || playerInput == correctLetter[1] || playerInput == correctLetter[2] || playerInput == correctLetter[3] || playerInput == correctLetter[4] || playerInput == correctLetter[5] || playerInput == correctLetter[6] || playerInput == correctLetter[7] || playerInput == correctLetter[8] || playerInput == correctLetter[9] || playerInput == correctLetter[10]) {
-           guessesRemain++
+           guessesRemain++;
         }
 
         for (var i=0; i < letterCount; i++) {
@@ -68,7 +68,7 @@ var gameOver = false;
                         correctLetter= [];
                         renderToGameBoard();
                         losses++;
-                        guessesRemain = 10
+                        guessesRemain = 10;
                         document.getElementById("incorrectSound").play();
                         renderBlanks();
                         if (losses == 3) {
@@ -82,7 +82,7 @@ var gameOver = false;
                         wins++;
                         popUp();
                         incorrectLetter = [];
-                        guessesRemain = 10
+                        guessesRemain = 10;
                         renderBlanks();
                         if (wins == 3) {
                             youWin();
@@ -95,7 +95,7 @@ var gameOver = false;
         else {
             incorrectLetter.push(playerInput);
             if (gameOver == false && wins < 3) {
-                document.getElementById("incorrectLetterText").innerHTML = "It's not these"
+                document.getElementById("incorrectLetterText").innerHTML = "It's not these";
             }
             incorrectLetter = incorrectLetter.filter( function( item, index, inputArray ) {
             return inputArray.indexOf(item) == index;
@@ -105,7 +105,7 @@ var gameOver = false;
                         correctLetter= [];
                         renderToGameBoard();
                         losses++;
-                        guessesRemain = 10
+                        guessesRemain = 10;
                         document.getElementById("incorrectSound").play();
                         renderBlanks();
                             if (losses == 3) {
@@ -120,8 +120,8 @@ var gameOver = false;
     function renderToGameBoard(playerInput) {
         if (gameOver == false && wins < 3) {
             document.getElementById("backgroundMusic").play();
-			document.getElementById("playing").innerHTML = "Phish Hangman";
-			document.getElementById("begin").innerHTML = "Press any letter...";
+			document.getElementById("playing").innerHTML = "HangPhan";
+			document.getElementById("begin").innerHTML = "Press any letter <br> or number";
             document.getElementById("incorrectLetter").innerHTML = incorrectLetter;
             document.getElementById("wins").innerHTML = "Wins: " + wins;
             document.getElementById("losses").innerHTML = "Losses: " + losses;
