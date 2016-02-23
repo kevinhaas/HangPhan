@@ -113,7 +113,7 @@ var gameOver = false;
                                 youLose();
                             }
                         }
-                    }console.log(isLetterInWord);
+                    }
          }
     
 // keeps the gameboard updated
@@ -128,10 +128,6 @@ var gameOver = false;
             document.getElementById("guesses").innerHTML = "Guesses Remaining - " + guessesRemain;
             document.getElementById("blankSpace").innerHTML = blankSpace.join("");
         }
-        console.log(song);
-        console.log(hiddenLetter);
-        console.log(letterCount);
-        console.log(blankSpace);
     }
         
     function popUp(playerInput) {
