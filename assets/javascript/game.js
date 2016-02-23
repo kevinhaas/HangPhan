@@ -133,7 +133,7 @@ var gameOver = false;
     function popUp(playerInput) {
         
         if (blankSpace.toString() == hiddenLetter.toString()) {
-            document.getElementById("flavorText").innerHTML = "Nice";
+            document.getElementById("flavorText").innerHTML = "Nice!";
             document.getElementById("correctAnswerScreen").innerHTML = "It was: " + blankSpace.join("");
             document.getElementById("correctSound").play();
         }
