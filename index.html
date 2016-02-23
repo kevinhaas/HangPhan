@@ -1,50 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>HangPhan</title>
-    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-	<link href="assets/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<body>  
+<body>
+    <audio id="backgroundMusic" loop="loop">
+        <source src="assets/audio/2001.mp3" type="audio/mp3">
+    </audio>
+    
+    <audio id="correctSound">
+        <source src="assets/audio/correct.mp3" type="audio/mp3">
+    </audio>
+    
+    <audio id="incorrectSound">
+        <source src="assets/audio/incorrect.mp3" type="audio/mp3">
+    </audio>
+    
+    <audio id="loseSound">
+        <source src="assets/audio/lose.mp3" type="audio/mp3">
+    </audio>
+    
+    <div id="wrapper">
+        <div class="container">
+            <!-- Game name a>d directions displayed while in gameOver==false state -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="gameText topTextAnim1" id="playing"></h1>
+                    <br>
+                    <h5 class="gameText topTextAnim2" id="begin"></h5>
+                    <div class="gameText" id="flavorText"></div>
+                </div>
+            </div>
 
+            <!-- youLose, youWin and correctAnswerScreen divs -->
+            <div class="row">
+                <div class="col-lg-12 gameText" id="gameOverDiv"></div>
+                <div class="col-lg-12 gameText" id="gameWonScreen"></div>
+                <div class="col-lg-12 gameText" id="correctAnswerScreen"></div>
+            </div>
+            
+            <!-- text indicating an incorrect letter and the list of incorrect letters-->
+            <div class="row">
+                <div class="col-lg-12 gameText" id="incorrectLetterText"></div>
+                <div class="col-lg-12 gameText" id="incorrectLetter"></div>
+            </div>
 
-<div id="wrapper">
-    <div class="container">
-    			<div class="col-md-8">
-					  	<h1>Phish Hangman</h1>
-					  	<h5 id="begin">Press any Key to Begin!</h5>
-					  	<hr>
+            <!-- Counters for wins, losses and guesses remaining -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="gameText bottomTextAnim1" id="winAndLoss">
+                        <span class="gameText" id="wins"></span>
+                        <br>
+                        <span class="gameText" id="losses"></span>
+                    </div>
+                    <div class="gameText bottomTextAnim2" id="guesses"></div>
+                </div>
+            </div>
 
-	<div class="row">
-		<div class="col-md-12" id="gameInfo">
-			<div id="wins">Wins - </div>
-			<div id="guesses"></div>
-			<hr>
-		</div>
-	</div>	
+            <!-- Blankspace on the game-field -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <br>
+                    <div class="gameText" id="blankSpace"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<div class="row">
-		<div class="col-md-12" id="gameInfo">
-			<div id="blankSpace"></div>
-		</div>
-	</div>
-
-
- <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/javascript/jquery.js"></script>
-    <script src="assets/javascript/bootstrap.min.js"></script>
-	<script>
-	$('#myTab a').click(function (e) {
-	  e.preventDefault()
-	  $(this).tab('show')
-	})	
-	</script>
- 	<script src="assets/javascript/game.js" type="text/javascript"></script>
+        <!-- Bootstrap core JavaScript
+    ==================================================
+    Placed at the end of the document so the pages load faster -->
+        <script src="assets/javascript/jquery.js"></script>
+        <script src="assets/javascript/bootstrap.min.js"></script>
+        <script>
+           $('#myTab a').click(function (e) {
+	       e.preventDefault()
+	       $(this).tab('show')
+	       })
+        </script>
+        <script src="assets/javascript/game.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </body>
 
 </html>

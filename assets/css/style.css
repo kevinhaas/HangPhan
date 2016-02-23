@@ -49,15 +49,22 @@ table {
 
 /* END RESET */
 
+/*keyframes start*/
+/*@keyframes title {
+	0% {color: #28FF13;}
+	100% {color: blue}
+}
 
-/*
- * Author: Carlos Alvarez
- * URL: http://alvarez.is
- *
- * Project Name: Victoria vCard - Free Bootstrap 3 Theme
- * Version: 1.0
- * URL: http://blacktie.co
- */
+@keyframes begin {
+	0% {color: purple;}
+	100% {color: #28FF13;}
+}
+
+@keyframes loseGame {
+ 	0% {color: red;}
+ 	100% {color: #28FF13;}
+}*/
+/*keyframes end*/
 
 body {
   	background-color: #f2f2f2;
@@ -76,7 +83,72 @@ body {
     -o-background-size: cover;
     background-size: cover;
   }
-  
-#begin {
-	font-size: 24px;
+
+h1 {
+	font-size: 72px;
 }
+
+.gameText {
+	text-align: center;
+}
+
+#begin {
+    padding-bottom: 200px;
+}
+
+#flavortext {
+    padding-bottom: 50px;
+}
+
+#correctAnswer {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#gameWonScreen {
+    text-align: center;
+}
+
+#incorrectLetterText {
+    text-align: center;
+    padding-top: 50px;
+}
+
+#incorrectLetter {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/*animations linked to keyframes start*/
+.topTextAnim1 {
+    animation-name: title;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.topTextAnim2 {
+	animation-name: begin;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.bottomTextAnim1 {
+
+}
+
+.bottomTextAnim2 {
+
+}
+
+#gameOverDiv {
+	font-size : 24px;
+	animation-name: loseGame;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+    text-align: center;
+}
+/*animations linked to keyframes end*/
