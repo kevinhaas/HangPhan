@@ -56,8 +56,8 @@ table {
 }
 
 @keyframes begin {
-	0% {color: #28FF13;}
-	100% {color: blue}
+	0% {color: blue;}
+	100% {color: #28FF13}
 }
 
 @keyframes loseGame {
