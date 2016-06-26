@@ -41,12 +41,12 @@ var gameOver = false;
     function mainGameLoop(playerInput) {
         var isLetterInWord = false;
         
-// checks to see if a keypress is already a current incorrect guess           
+// checks to see if a keypress is already a current incorrect - not a for loop currently due to duplication
         if (playerInput != incorrectLetter[0] && playerInput != incorrectLetter[1] && playerInput != incorrectLetter[2] && playerInput != incorrectLetter[3] && playerInput != incorrectLetter[4] && playerInput != incorrectLetter[5] && playerInput != incorrectLetter[6] && playerInput != incorrectLetter[7] && playerInput != incorrectLetter[8] && playerInput != incorrectLetter[9] && playerInput != incorrectLetter[10]) {
         guessesRemain--;
         }
      
-// checks to see if a keypress is already a current correct guess   
+// checks to see if a keypress is already a current correct guess - not a for loop currently due duplication
         if (playerInput == correctLetter[0] || playerInput == correctLetter[1] || playerInput == correctLetter[2] || playerInput == correctLetter[3] || playerInput == correctLetter[4] || playerInput == correctLetter[5] || playerInput == correctLetter[6] || playerInput == correctLetter[7] || playerInput == correctLetter[8] || playerInput == correctLetter[9] || playerInput == correctLetter[10]) {
            guessesRemain++;
         }
