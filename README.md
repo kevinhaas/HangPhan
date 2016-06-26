@@ -11,4 +11,4 @@ JavaScript<br />
 jQuery<br />
 HTML5<br />
 CSS3<br />
-BootStrap
+Bootstrap
