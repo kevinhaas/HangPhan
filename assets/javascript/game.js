@@ -117,6 +117,7 @@ function mainGameLoop(playerInput) {
   }
 
   if (
+    !isLetterInWord && 
     playerInput == correctLetter[0] ||
     playerInput == correctLetter[1] ||
     playerInput == correctLetter[2] ||
