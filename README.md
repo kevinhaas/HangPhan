@@ -1,11 +1,11 @@
 # HangPhan
 
-[Prove yourself, phanner](http://hangphan.herokuapp.com/)
+[Prove yourself, phanner](http://hangphan.kevhaas.com/)
 
 
-###Play a few rounds of hangman to your favorite jams. Listen for my (blow)horn.
+Play a few rounds of hangman to your favorite jams. Listen for my (blow)horn.
 
-####Utilizes:
+## Utilizes:
 
 JavaScript<br />
 jQuery<br />
