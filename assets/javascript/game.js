@@ -116,23 +116,6 @@ function mainGameLoop(playerInput) {
     guessesRemain--;
   }
 
-  if (
-    !isLetterInWord && 
-    playerInput == correctLetter[0] ||
-    playerInput == correctLetter[1] ||
-    playerInput == correctLetter[2] ||
-    playerInput == correctLetter[3] ||
-    playerInput == correctLetter[4] ||
-    playerInput == correctLetter[5] ||
-    playerInput == correctLetter[6] ||
-    playerInput == correctLetter[7] ||
-    playerInput == correctLetter[8] ||
-    playerInput == correctLetter[9] ||
-    playerInput == correctLetter[10]
-  ) {
-    guessesRemain++;
-  }
-
   // checks if you got the word and then adds a win
   if (isLetterInWord) {
     for (var i = 0; i < letterCount; i++) {
